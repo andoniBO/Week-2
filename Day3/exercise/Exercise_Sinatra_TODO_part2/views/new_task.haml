@@ -1,0 +1,9 @@
+/ views/task_index.haml
+<!doctype html>
+%html
+  %head     
+    %title Add new task!!
+  %body
+    %form{:action => "/create_task", :method => "POST"}
+      %input{:name => "content", :type => "text", :placeholder => "Input your content :)"}
+      %button{:type => "submit"} Add task

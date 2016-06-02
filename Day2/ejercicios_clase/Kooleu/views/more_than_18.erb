@@ -1,0 +1,9 @@
+<h1><%= @name %></h1>
+<% age = Time.new.year - @date_of_birth.to_i
+if age >= 18 %>
+<p>Correcto, tienes mas de 18 años</p>
+<img src="http://vignette2.wikia.nocookie.net/silverspoon/images/5/5f/Bien.png/revision/latest?cb=20130811211026&path-prefix=es">
+<% else %>
+<p>Incorrecto, tienes menos de 18 años</p>
+<img src="http://static8.depositphotos.com/1054619/895/v/950/depositphotos_8955683-Thumb-bad.jpg">
+<% end %>

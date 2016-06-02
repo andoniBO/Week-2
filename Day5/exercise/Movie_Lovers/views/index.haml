@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+%head
+  %title Movie Lovers
+%body
+  %h1 Movie lovers quiz
+  %p Which movie would you like the quiz to be related to?
+  %form{:action => "/search_top_nine", :method => "POST"}
+    %input{:name => "title", :placeholder => "Movie title", :type => "text"}
+    %button{type: "submit"} Start the quiz!!

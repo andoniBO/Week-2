@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+%head
+  %title Sinatra blog
+%body
+  %p SINATRA BLOG
+  %ul
+  - @posts.each do |post|
+    %li
+      %a{:href => '/post_details/:post.id'}= post.title
+      = post.date

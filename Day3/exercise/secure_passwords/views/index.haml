@@ -1,0 +1,10 @@
+/ views/index.haml
+<!doctype html>
+%html
+  %head     
+    %title Welcome back!
+  %body
+    %form{:action => "/password_checker", :method => "POST"}
+      %input{:name => "user", :type => "text", :placeholder => "Username :)"}
+      %input{:name => "password", :type => "password", :placeholder => "Password :)"}
+      %button{:name => "option", :type => "submit", :value => "profile"} My profile

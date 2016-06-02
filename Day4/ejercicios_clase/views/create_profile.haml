@@ -1,0 +1,17 @@
+<!doctype html>
+%h1 Ironhack
+%h2 #{@error}
+%form{:action => "/create_profile", :method => "POST"}
+  %input{:name => "name", :placeholder => "name", :type => "text"}
+  %p
+  %input{:name => "birth_date", :placeholder => "year of birth", :type => "number"}
+  %p
+  Check if you are a pro 
+  %input{:name => "level_of_expertise", :type => "checkbox"}
+  %p
+  %input{:name => "email", :placeholder => "e-mail", :type => "mail"}
+  %p
+  %input{:name => "address", :placeholder => "address", :type => "text"}
+  %p
+  %button{type: "submit"} Create
+

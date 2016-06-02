@@ -1,0 +1,13 @@
+/ views/validate.haml
+<!doctype html>
+%html
+  %head
+    %title User profile
+  %body
+    -if session[:vip] == true
+      %p VIP USER
+    -else
+      %p NOT VIP
+    %img{:src => "https://lh3.googleusercontent.com/-OmRzDidAGAM/AAAAAAAAAAI/AAAAAAAABDo/NTk1sX0aGOk/photo.jpg"}/
+    %p Name: #{@user}
+    %p Age: #{@age}

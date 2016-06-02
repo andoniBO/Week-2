@@ -1,0 +1,25 @@
+<!doctype html>
+%h1 Ironhack
+Name: 
+- if @name
+  #{@name.capitalize}
+%p Age: #{@age}
+Expert? 
+- if @level_of_expertise == "on"
+  Yes
+- else
+  No
+%p e-mail: #{@email}
+- if @address.to_s != ""
+  %p Address: #{@address}
+- #binding.pry
+- if @level_of_expertise == "on"
+  %h2 Professional course selector
+  - @courses.each do |course| 
+    = course[:name].capitalize
+    %a{:href => "/sign_up" } Sign up for this course
+- else
+  %h2 Noobie course selector
+  - @courses.each do |course| 
+    = course[:name].capitalize
+    %a{:href => "/sign_up/#{course[:id]}"} Sign up for this course

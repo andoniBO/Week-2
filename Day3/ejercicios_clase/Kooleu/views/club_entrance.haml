@@ -1,0 +1,18 @@
+/ views/validate.haml
+<!doctype html>
+%html
+  -if @user
+    %head     
+      %title Welcome back!
+    %body
+      %form{:action => "/menu", :method => "GET"}
+        %button{:name => "option", :type => "submit", :value => "profile"} My profile
+  -else
+    %head
+      %title Join our club!
+    %body
+      %form{:action => "/menu", :method => "GET"}
+        %p Welcome to our club, what would you like to do?
+        %button{:name => "option", :type => "submit", :value => "log_in"} Log in
+        %p
+        %button{:name => "option", :type => "submit", :value => "join_list"} Join our VIP

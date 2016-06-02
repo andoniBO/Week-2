@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+%head
+  %title Movie Lovers
+%body
+  %h1 Movie lovers quiz
+  %p #{@random_question[:question]}
+  %ul
+    - @movies.each do |movie|
+      //- if movie.poster.nil?
+      %li 
+        //= movie.title
+        %a{:href => "/check_answer/#{movie.title}/#{@random_question[:id]}"} 
+          %img{:alt => "Mountain View", :src => movie.poster, :style => "width:304px;height:228px;"}/
+      //%a{:href => '/post_details/:post.id'}= post.title
+      

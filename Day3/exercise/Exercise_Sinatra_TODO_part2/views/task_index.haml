@@ -1,0 +1,21 @@
+/ views/task_index.haml
+<!doctype html>
+%html
+  %head     
+    %title Your tasks!!
+  %body
+    %a{:href => "/new_task" } Add new task :(
+    %ul
+      - @tasks.each do |task| 
+        - if !task.completed? 
+          %li
+            #{task.content} 
+            %a{:href => "/complete/#{task.id}" } Complete task :D
+        -else
+          %li{:style => "text-decoration: line-through"}
+            #{task.content} 
+            %form{:action => "/delete_task", :method => "POST"}
+              %input{:name => "id", :type => "number", :value => "#{task.id}", :hidden => "true"}
+              %button{:type => "submit"} Delete task
+
+        

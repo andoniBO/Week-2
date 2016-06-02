@@ -1,0 +1,11 @@
+/ views/validate.haml
+<!doctype html>
+%html
+  %head
+    %title Join the VIP
+  %body
+    %p Join our VIP!
+    %form{:action => "/join_VIP", :method => "POST"}
+      %input{:name => "user", :placeholder => "username", :type => "string"}
+      %input{:name => "date_of_birth", :placeholder => "year of birth", :type => "number"}
+      %button{:type => "submit"} Join!

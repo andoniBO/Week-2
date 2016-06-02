@@ -1,0 +1,11 @@
+/ views/login.haml
+<!doctype html>
+%html
+  %head
+    %title Club login
+  %body
+    %h1 Awesome club login
+    %form{:action => "/check_login", :method => "POST"}
+      %input{:name => "user", :placeholder => "username", :type => "string"}
+      %input{:name => "date_of_birth", :placeholder => "year of birth", :type => "number"}
+      %button{:name => "access", :type => "submit", :value => "doublecheck"} Join

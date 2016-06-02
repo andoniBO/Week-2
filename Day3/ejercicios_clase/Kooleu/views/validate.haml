@@ -1,0 +1,13 @@
+/ views/validate.haml
+<!doctype html>
+%html
+  -if session[:age] > 18 || session[:vip] == true
+    %head
+      %title You have successfully logged in!
+    %body
+      %img{:src => "http://universidadmidrasha.com/upload/2014/04/alegria-4.jpg"}/
+  -else
+    %head
+      %title You are underage bitch! Get out of here!
+    %body
+      %img{:src => "http://drphyloel.com/wp-content/uploads/2015/11/tristeza-box.jpg"}/
